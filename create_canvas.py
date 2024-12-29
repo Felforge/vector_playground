@@ -28,9 +28,9 @@ def show_coordinates(input_canvas):
     """
     Shows coordinates at the tip of the cursor
     """
-    def show_coordinated_inner(event, width=880, height=880, spacing=40):
+    def show_coordinates_inner(event, width=880, height=880, spacing=40):
         x, y = event.x, event.y
         x_coord, y_coord = get_coordinates(x, y, width, height, spacing)
         input_canvas.delete("cursor_text")
         input_canvas.create_text(x - 15, y - 15, text=f"({round(x_coord, 3)}, {round(y_coord, 3)})", fill="red", font=("Arial", 8), tag="cursor_text")
-    return show_coordinated_inner
+    return show_coordinates_inner
