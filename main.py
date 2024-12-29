@@ -36,8 +36,7 @@ def show_coordinates(input_canvas):
         x, y = event.x, event.y
         x_coord, y_coord = get_coordinates(x, y, width, height, spacing)
         input_canvas.delete("cursor_text")
-        input_canvas.create_text(x - 15, y - 15, text=f"({round(x_coord, 3)}, {round(y_coord, 3)})",
-                                 fill="red", font=("Arial", 8), tag="cursor_text")
+        input_canvas.create_text(x - 15, y - 15, text=f"({round(x_coord, 3)}, {round(y_coord, 3)})", fill="red", font=("Arial", 8), tag="cursor_text")
     return show_coordinated_inner
 
 if __name__ == '__main__':
