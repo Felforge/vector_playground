@@ -18,11 +18,11 @@ def draw_grid(input_canvas, width, height, spacing):
     input_canvas.create_line(central_x, 0, central_x, height, fill="black")
     input_canvas.create_line(0, central_y, width, central_y, fill="black")
 
-def get_coordinates(x, y, width, height, spacing) -> Tuple[float, float]:
+def get_coordinates(x, y, width=880, height=880, spacing=40) -> Tuple[float, float]:
     """
     Returns coordinates based on X and Y location
     """
-    return (x - (width/2)) / spacing, (y - (height/2)) / spacing
+    return (x - (width/2)) / spacing, ((height/2) - y) / spacing
 
 def show_coordinates(input_canvas):
     """
